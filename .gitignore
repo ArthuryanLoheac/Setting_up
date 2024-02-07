@@ -1,0 +1,6 @@
+*.a
+*.o
+*.log
+setting_up
+tests/*
+*.json
