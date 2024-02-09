@@ -1,3 +1,7 @@
+# Setting Up
+Compilation :
+> make
+
 Le projet "Setting Up" vise à développer un programme en langage C pour déterminer le plus grand carré possible sur une grille tout en évitant les obstacles. L'objectif principal est de trouver la plus grande zone carrée libre sur une grille donnée.
 
 Fonctionnalités :
