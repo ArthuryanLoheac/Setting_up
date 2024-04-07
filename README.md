@@ -1,35 +1,60 @@
-# Setting Up
-Compilation :
-> make
+# SETTING UP - Largest Square Finder
 
-Le projet "Setting Up" vise à développer un programme en langage C pour déterminer le plus grand carré possible le plus en haut à gauche sur une grille tout en évitant les obstacles.
+"SETTING UP" is a project under the "ELEMENTARY PROGRAMMING IN C" module, aimed at teaching students about dynamic programming through a practical and engaging challenge. The essence of the project is to identify the largest possible square without obstacles on a given board, a metaphor for setting up an efficient workspace in the cluttered laboratory that new Epitech students encounter.
 
-Fonctionnalités :
+## Project Overview
 
-Validation de la grille :  
-  Le fichier de grille doit respecter certaines contraintes, telles que le nombre de lignes en première ligne, la présence uniquement des caractères '.' et 'o' sur les autres lignes, la même longueur pour toutes les lignes (sauf la première), etc.
+The project challenges students to write a C program that analyzes a board layout to find the largest square that can be formed without including any obstacles. The board layout is provided via a file or generated dynamically based on given parameters.
 
-Détermination du plus grand carré :  
-  Le programme détermine le plus grand carré possible sur la grille sans traverser les obstacles, et le représenter en remplaçant certains '.' par 'x'.
+### Features
 
-Génération de la grille :  
-  En entrant un paterne et un nombre de lignes au lieu d'un fichier le programme généreras une grille en suivant ce paterne
+- **Dynamic Board Analysis:** Processes a board layout to determine the largest free square area.
+- **File Input:** Accepts a file containing the board's layout, adhering to specific format rules.
+- **Generated Board Input:** Capable of generating a board based on dimensions and a pattern.
+- **Custom Output:** Prints the board with the largest square marked, prioritizing the highest and leftmost solutions in case of multiple options.
 
-Exemple grille :  
->9  
-....................o......  
-....o......................  
-............o..............  
-................o..........  
-....o......................  
-..............o............  
-.................o.........  
-.....................o.....  
-..o........................  
+## Getting Started
 
-**Fonctionnement :**  
-Avec fichier donnée :  
->./setting_up chemin_vers_grille
+### Prerequisites
 
-Génération :  
->./setting_up nombre_lignes paterne  
+- GCC compiler or any standard C compiler
+- Basic understanding of command-line operations
+
+### Compilation
+
+Compile the program using the included Makefile:
+
+```bash
+make
+```
+
+This will generate the executable setting_up, ready for use.
+
+## Usage
+To analyze a board from a file:
+
+```bash
+./setting_up path_to_file
+```
+To generate a board and analyze it:
+
+```bash
+./setting_up dimension "pattern"
+```
+## File Format
+The input file must follow these constraints:
+
+The first line specifies the number of lines on the board.
+Board content uses . to denote empty spaces and o to mark obstacles.
+All lines, except the first, must be of equal length and end with \n.
+## Examples
+Analyzing a provided board:
+
+```bash
+./setting_up example_file
+```
+Generating and analyzing a 6x6 board with a "..o.." pattern:
+
+```bash
+./setting_up 6 "..o.."
+```
